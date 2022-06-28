@@ -62,7 +62,7 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    padding: 3rem 8rem; /* Was 3rem 18rem */
 }
 
 .section {
@@ -201,14 +201,14 @@ section {
             clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
         }
         .image {
-            border-radius: var(--br-sm-2);
+            border-radius: 72% 28% 17% 83% / 87% 55% 45% 13% ;
             height: 80%;
             width: 68%;
             margin-left: 8rem;
             background-color: var(--color-black);
             transition: all .4s ease-in-out;
             img {
-                border-radius: var(--br-sm-2);
+                border-radius: 72% 28% 17% 83% / 87% 55% 45% 13% ;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -272,20 +272,20 @@ section {
                     padding-left: 3px;
                 }
                 .small-text {
-                    padding-left: 3rem;
+                    padding-left: 0rem;
                     position: relative;
                     text-transform: uppercase;
                     font-size: 1.2rem;
                     color: var(--color-grey-1);
-                    letter-spacing: 2px;
+                    letter-spacing: 1px;
                     &::before {
                         content: '';
                         position: absolute;
                         left: 0px;
                         top: 15px;
                         width: 2rem;
-                        height: 2px;
-                        background-color: var(--color-grey-5);
+                        height: 4px;
+                        background-color: var(--color-grey-2);
                     }
                     
                 }
@@ -419,7 +419,8 @@ section {
             span {
                 color: var(--color-grey-2);
                 font-weight: 500;
-                font-size: 1.2rem;
+                font-size: 1rem;
+                display: block;
             }
         }
         p {
@@ -430,7 +431,7 @@ section {
 
 /* Portfolio */
 
-.port-text {
+.portfolio-text {
     padding: 2rem 0;
     text-align: center;
 }
@@ -512,7 +513,7 @@ section {
 
 .contact-content-con {
     display: flex;
-    padding-top: 3.5rem;
+    padding-top: 1rem;
     .left-contact {
         flex: 2;
         h4 {
@@ -529,13 +530,14 @@ section {
             .contact-item {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: flex-start;
                 p {
-                    margin: 0.3rem 0 !important;
+                    margin: 0.3rem 0.5rem !important;
                     padding: 0 !important;
                 }
                 .icon {
                     display: grid;
+                    color: var(--color-secondary);
                     grid-template-columns: 40px 1fr;
                     i {
                         display: flex;
@@ -548,7 +550,7 @@ section {
 
         .contact-icons {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .contact-icon {
@@ -585,34 +587,92 @@ section {
     .right-contact {
         flex: 3;
         margin-left: 3rem;
-        .input-control {
-            margin: 1.5rem 0;
-            input, textarea {
-                border-radius: 30px;
-                font-weight: inherit;
-                font-size: inherit;
-                font-family: inherit;
-                padding: .8rem 1.1rem;
-                outline: none;
-                border: none;
-                background-color: var(--color-grey-5);
-                width: 100%;
-                color: var(--color-white);
-                resize: none;
+            .input-control {
+                margin: 1.5rem 0;
+                input, textarea {
+                    border-radius: 30px;
+                    font-weight: inherit;
+                    font-size: inherit;
+                    font-family: inherit;
+                    padding: .8rem 1.1rem;
+                    outline: none;
+                    border: none;
+                    background-color: var(--color-grey-5);
+                    width: 100%;
+                    color: var(--color-white);
+                    resize: none;
+                }
             }
-        }
-        .i-c-2 {
-            display: flex;
-            :last-child {
-                margin-left: 1.5rem;
+            
+            .i-c-2 {
+                display: flex;
+                :last-child {
+                    margin-left: 1.5rem;
+                }
             }
-        }
 
-        .submit-btn {
-            display: flex;
-            justify-content: flex-start;
-        }
+            input[type="submit"] {
+                display: flex;
+                justify-content: flex-start;
+                border-radius: 30px;
+                color: inherit;
+                font-family: inherit;
+                font-size: 1rem;
+                font-weight: 600;
+                border: 1px solid var(--color-secondary);
+                padding: 0.7rem 2rem;
+                background-color: var(--color-primary);
+                cursor: pointer;
+                &:hover {
+                    background-color: var(--color-secondary);
+                }
+            }
+        
+            #boxBack {
+                position: fixed; 
+                z-index: 999;
+                top: 0; 
+                left: 0;
+                width: 100%; 
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                &.show {
+                 display: block;   
+                }
+            }
+
+            #boxWrap {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                top: 50%; 
+                left: 50%;
+                transform: translate(-50%, -50%);
+                min-width: 320px; 
+                max-width: 600px;
+                padding: 1.5rem;
+                background: var(--color-primary);
+                border: 1px solid var(--color-secondary);
+                border-radius: 30px;
+            
+                input[type="button"] {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: var(--color-secondary);
+                    color: var(--color-white);
+                    font-size: 1rem;
+                    font-family: inherit;
+                    padding: 0.5rem;
+                    border: none;
+                    cursor: pointer;
+                    margin: 1rem auto 0 auto;
+                }
+            }
     }
+
 }
 
 /* Independent Components */
@@ -632,6 +692,7 @@ section {
     align-self: flex-start;
     align-items: center;
     overflow: hidden;
+    margin-top: 1em;
     .btn-text {
         padding: 0 2rem;
     }

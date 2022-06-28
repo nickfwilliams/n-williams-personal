@@ -43,4 +43,16 @@ function PageTransitions(){
     
 }
 
+function dbox (msg) {
+    if (msg != undefined) {
+      document.getElementById("boxTxt").innerHTML = msg;
+      document.getElementById("boxBack").classList.add("show");
+    } else { document.getElementById("boxBack").classList.remove("show"); }
+  }
+
+  function onSubmit(token) {
+    document.getElementById("EmailForm").submit();
+  }
+
+
 PageTransitions();
