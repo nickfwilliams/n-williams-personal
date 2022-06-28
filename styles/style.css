@@ -592,6 +592,7 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
+  border: 1px solid var(--color-grey-2);
 }
 
 .portfolios .portfolio-item .hover-items {
