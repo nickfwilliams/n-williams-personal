@@ -8,7 +8,7 @@
 
 :root {
   --color-primary: #191d2b;
-  --color-secondary: #27ae60;
+  --color-secondary: #0099ff;
   --color-white: #fff;
   --color-black: #000;
   --color-grey-0: #f8f8f8;
@@ -391,6 +391,15 @@ section {
   width: 2rem;
   height: 4px;
   background-color: var(--color-grey-2);
+}
+
+.about-container .right-about .about-item .abt-text .skills-list {
+  padding-left: 0.7rem;
+}
+
+.about-container .right-about .about-item .abt-text .skills-list li {
+  list-style-type: disc;
+  padding: 0.3rem 0;
 }
 
 .about-container .left-about {
@@ -800,6 +809,15 @@ section {
   font-size: 1.3rem;
 }
 
+.contact-content-con .left-contact svg {
+  height: 20px;
+  width: 20px;
+}
+
+.contact-content-con .left-contact svg path {
+  fill: var(--color-white);
+}
+
 .contact-content-con .right-contact {
   -webkit-box-flex: 3;
       -ms-flex: 3;
@@ -983,26 +1001,11 @@ section {
 .main-title h2 {
   position: relative;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
-}
-
-.main-title h2 span {
   color: var(--color-secondary);
-}
-
-.main-title h2 .bg-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--color-grey-5);
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  z-index: -1;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-weight: 800;
-  font-size: 6.3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
 /* For styles LESS @ than 600px */
@@ -1016,14 +1019,14 @@ section {
     padding: 2rem 2.5rem;
   }
   .main-title h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 1rem;
   }
   .main-title h2 span {
     font-size: 2.5rem;
   }
   .main-title h2 .bg-text {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
   .left-header .h-shape {
     display: none;
@@ -1189,15 +1192,6 @@ section {
   }
   .header-content .right-header {
     padding-right: 10rem;
-  }
-  .main-title h2 {
-    font-size: 4rem;
-  }
-  .main-title h2 span {
-    font-size: 4rem;
-  }
-  .main-title h2 .bg-text {
-    font-size: 4.5rem;
   }
   .contact-content-con {
     -webkit-box-orient: vertical;
