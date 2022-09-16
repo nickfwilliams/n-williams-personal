@@ -22,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -62,9 +62,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -76,9 +76,9 @@ select {
 }
 
 :root {
-    --color-primary: hsl(30,93%,72%);
-    --color-white: hsl(0,0%,100%);
-    --color-container-bg: hsla(0,0%,0%,70%);
+  --color-primary: hsl(30, 93%, 72%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-container-bg: hsla(0, 0%, 0%, 70%);
 }
 
 /* Universal styles */
@@ -92,7 +92,7 @@ body {
   background-repeat: none;
   background-size: cover;
   font-family: poppins, sans-serif;
-  font-size:clamp(16px, 2vw, 18px); 
+  font-size: clamp(16px, 2vw, 18px);
   font-weight: 300;
   padding-block: 3em;
   color: var(--color-white);
@@ -109,7 +109,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 4px 1px 4px 0px rgba(0,0,0,0.5);
+  box-shadow: 4px 1px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .main-img {
@@ -131,7 +131,8 @@ body {
   padding-bottom: 1.75rem;
 }
 
-.skills-heading, .qualifications-heading {
+.skills-heading,
+.qualifications-heading {
   color: var(--color-primary);
   font-weight: 400;
   padding-bottom: 1rem;
@@ -177,14 +178,12 @@ a:hover {
   margin-right: 0.3rem;
 }
 
-
 /* Contact Shortcuts */
 
 .contact-shortcuts {
   display: flex;
   width: 60%;
   justify-content: space-around;
-  margin-top: 1rem;
 }
 
 .contact-shortcuts img {
@@ -198,7 +197,7 @@ a:hover {
 }
 
 .contact-shortcuts a span::after {
-  content: '';
+  content: "";
   height: 50px;
   width: 50px;
   position: absolute;
@@ -220,7 +219,7 @@ a:hover {
     justify-content: flex-start;
     padding: 0;
   }
-  
+
   .main-container {
     border-radius: 0;
     max-width: 50vw;
@@ -229,7 +228,8 @@ a:hover {
     padding-inline: 2rem;
   }
 
-  .main-title, .subtitle {
+  .main-title,
+  .subtitle {
     text-align: left;
   }
 
@@ -247,7 +247,6 @@ a:hover {
 
   .contact-shortcuts {
     justify-content: flex-start;
-    padding-top: 3rem;
   }
 
   .contact-shortcuts img {
@@ -260,7 +259,6 @@ a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-
   .main-container {
     max-width: 35vw;
   }
